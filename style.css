@@ -62,6 +62,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
 }
 
 img {
@@ -71,11 +72,15 @@ img {
 }
 
 #title {
-    font-weight: 900;
     font-size: 24px;
+    font-weight: 900;
     margin-top: 30px;
     margin-bottom: 15px;
     color: var(--dark-blue);
+}
+
+#description {
+    width: 275px;
 }
 
 #pricing {
@@ -83,11 +88,48 @@ img {
     border-radius: 10px;
     margin-left: 25px;
     margin-right: 25px;
+    width: 290px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-a {
+/* pricing container contents */
+#icon{
+    width: 35px;
+}
+#price-plan {
+    margin-right: 40px;
+}
+#plan{
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+#change {
+    color: var(--bright-blue);
+}
+
+#payment {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
     text-decoration: none;
-    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 290px;
+    border-radius: 15px;
+    border-width: 2px;
+    border-color: var(--bright-blue);
+    margin-bottom: 20px;
+    box-shadow: 0 15px 15px hsla(245, 75%, 52%, 0.25);
+}
+
+#cancel {
+    color: var(--desaturated-blue);
+    text-decoration: none;
+    margin-bottom: 30px;
 }
 
 .attribution { font-size: 11px; text-align: center; }
