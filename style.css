@@ -108,11 +108,15 @@ img {
     font-weight: 700;
     color: var(--dark-blue);
 }
-#change {
+#change-plan {
     color: var(--bright-blue);
+}
+#change-plan:hover {
+    color: red;
 }
 
 #payment {
+    position: relative;
     background-color: var(--bright-blue);
     color: var(--very-pale-blue);
     text-decoration: none;
@@ -120,16 +124,54 @@ img {
     padding-bottom: 20px;
     width: 290px;
     border-radius: 15px;
+    border-style: solid;
     border-width: 2px;
     border-color: var(--bright-blue);
     margin-bottom: 20px;
     box-shadow: 0 15px 15px hsla(245, 75%, 52%, 0.25);
 }
 
+#payment:hover {
+    animation-name: invert;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes invert {
+    from {
+        background-color: var(--bright-blue);
+        color: var(--very-pale-blue);
+        top: 0;
+    }
+    to {
+        color: var(--dark-blue);
+        background-color: white;
+        top: 10px;
+    }
+}
+
 #cancel {
     color: var(--desaturated-blue);
     text-decoration: none;
     margin-bottom: 30px;
+    position: relative;
+}
+
+#cancel:hover {
+    animation-name: down;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes down {
+    from {
+        top: 0
+    }
+    to {
+        top: 5px;
+    }
 }
 
 .attribution { font-size: 11px; text-align: center; }
